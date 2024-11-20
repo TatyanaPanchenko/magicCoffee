@@ -2,15 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 // import exp from "constants";
 
 const latteSlice = createSlice({
-  name: "late",
-  initialState: { name: null, description: null },
+  name: "latte",
+  initialState: [],
   reducers: {
     setLatte(state, action) {
-      state.name = action.payload.name;
-      state.description = action.payload.description;
+      state.push(action.payload);
     },
   },
 });
-
 export const { setLatte } = latteSlice.actions;
 export default latteSlice.reducer;

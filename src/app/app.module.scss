@@ -1,0 +1,28 @@
+.container {
+  max-width: 376px;
+  .main-container {
+    background-color: #324a59;
+    border-radius: 25px 25px 0 0;
+    padding: 0 26px;
+    .main-title {
+      color: #fff;
+      padding: 16px 0 24px;
+      font-size: 16px;
+    }
+    .main-carts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      .cofee-item {
+        border-radius: 15px;
+        background-color: #f7f8fb;
+        width: 154px;
+        height: 164px;
+        .coffee-name {
+          color: #001833;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

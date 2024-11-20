@@ -7,4 +7,35 @@ header {
     color: #333;
     text-decoration: none;
   }
+  .header-container {
+    padding: 0 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 172px;
+    margin-bottom: 7px;
+    .header-greeting {
+      color: #d8d8d8;
+      font-size: 14px;
+      font-weight: 500;
+      .header-name {
+        color: #001833;
+        font-size: 18px;
+      }
+    }
+    .header-icons {
+      display: flex;
+      .header-cart {
+        display: block;
+        width: 26px;
+        height: 26px;
+        background-image: url("../../assets/Buy.svg");
+      }
+      .header-users {
+        width: 26px;
+        height: 26px;
+        background-image: url("../../assets/Profile.svg");
+      }
+    }
+  }
 }
