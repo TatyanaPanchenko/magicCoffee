@@ -13,7 +13,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      .cofee-item {
+      .coffee-item {
         border-radius: 15px;
         background-color: #f7f8fb;
         width: 154px;
@@ -22,6 +22,25 @@
           color: #001833;
           font-size: 14px;
         }
+      }
+    }
+  }
+  .footer-container {
+    border-radius: 20px;
+    background-color: #fff;
+    .footer-icons {
+      display: flex;
+      justify-content: space-evenly;
+      .footer-icon-home {
+        width: 21px;
+        height: 21px;
+        background-image: url("../../assets/home.svg");
+      }
+      .footer-icon-gift {
+        background-image: url("../../assets/gift.png");
+      }
+      .footer-icon-about {
+        background-image: url("../../assets/about.svg");
       }
     }
   }

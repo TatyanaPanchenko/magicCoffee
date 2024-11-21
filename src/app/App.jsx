@@ -21,8 +21,6 @@ import { setLatte } from "../store/slice/LatteSlice";
 import { setRaf } from "../store/slice/RafSlice";
 
 export default function App() {
-  const getCoffeeStore = useSelector((state) => state.latte);
-  console.log(getCoffeeStore);
   const dispatch = useDispatch();
   useEffect(() => {
     const getCoffeeBase = getCoffee();
@@ -57,7 +55,7 @@ export default function App() {
       }
     });
   }, []);
-
+  const getCoffeeStore = useSelector((state) => state.coffee);
   return (
     <div className={style.container}>
       <Header />
@@ -65,25 +63,36 @@ export default function App() {
         <div className={style["main-container"]}>
           <div className={style["main-title"]}>Select your coffee</div>
           <div className={style["main-carts"]}>
-            {getCoffeeStore.map((item) => {
+            {getCoffeeStore.map((item, index) => {
               return (
-                <div className={style["cofee-item"]}>
+                <div className={style["coffee-item"]} key={index}>
                   <div className={style["coffee-img"]}>
-                    <img src={item.img} alt={item.name} />
+                    <img src={`./assets/coffee/.png`} alt={item.name} />
                   </div>
                   <div className={style["coffee-name"]}>{item.name}</div>
                 </div>
               );
             })}
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/cappuccino" element={<CappuccinoPage />} />
+              <Route path="/latte" element={<LattePage />} />
+              <Route path="/raf" element={<RafPage />} />
+            </Routes>
           </div>
         </div>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/cappuccino" element={<CappuccinoPage />} />
-          <Route path="/latte" element={<LattePage />} />
-          <Route path="/raf" element={<RafPage />} />
-        </Routes>
       </main>
+      <footer>
+        <div className={style["footer-container"]}>
+          <div className={style["footer-icons"]}>
+            <NavLink to="/">
+              <div className={style["footer-icon-home"]}></div>
+            </NavLink>
+            <div className={style["footer-icon-gift"]}></div>
+            <div className={style["footer-icon-about"]}></div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
