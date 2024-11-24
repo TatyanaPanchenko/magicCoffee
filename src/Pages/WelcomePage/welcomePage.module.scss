@@ -1,0 +1,42 @@
+.welcomepage {
+  text-align: center;
+  .welcomepage-logo {
+    background-color: #324a59;
+    width: 375px;
+    height: 323px;
+    background-image: url("./src/assets/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 98px 0 25px;
+  }
+  .welcomepage-title {
+    font-size: 28px;
+    font-weight: 400;
+    color: #181d2d;
+    max-width: 240px;
+    margin: auto;
+  }
+  .welcomepage-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #aaaaaa;
+    margin-bottom: 136px;
+  }
+  .welcomepage-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 136px;
+    padding-right: 47px;
+    .welcomepage-btn {
+      background-image: url("./src/assets/forward.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: #324a59;
+      outline: none;
+      border: none;
+    }
+  }
+}

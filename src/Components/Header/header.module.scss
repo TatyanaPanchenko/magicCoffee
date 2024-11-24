@@ -1,8 +1,8 @@
 header {
   display: flex;
   gap: 20px;
-  font-size: 22px;
   justify-content: center;
+  padding-top: 63px;
   a {
     color: #333;
     text-decoration: none;
@@ -17,24 +17,25 @@ header {
     .header-greeting {
       color: #d8d8d8;
       font-size: 14px;
-      font-weight: 500;
       .header-name {
+        padding-top: 2px;
         color: #001833;
         font-size: 18px;
       }
     }
     .header-icons {
       display: flex;
+      gap: 20px;
       .header-cart {
         display: block;
         width: 26px;
         height: 26px;
-        background-image: url("../../assets/Buy.svg");
+        background-image: url("../../assets/header/buy.svg");
       }
       .header-users {
         width: 26px;
         height: 26px;
-        background-image: url("../../assets/Profile.svg");
+        background-image: url("../../assets/header/profile.svg");
       }
     }
   }

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:wght@300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +7,20 @@
 }
 
 body {
-  padding: 100px;
-  font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  .phone-top {
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("./src/assets/phone-top-dark.png");
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 23px;
+    z-index: 10;
+  }
 }

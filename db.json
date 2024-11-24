@@ -1,6 +1,11 @@
 {
   "coffee": [
     {
+      "name": "Americano",
+      "id": "1f7b",
+      "count": "1"
+    },
+    {
       "name": "Cappuccino",
       "id": "1f7b"
     },
@@ -9,96 +14,16 @@
       "id": "6350"
     },
     {
+      "name": "Flat White",
+      "id": "1f7b"
+    },
+    {
       "name": "Raf",
       "id": "60fa"
-    }
-  ],
-  "cappuccino": [
+    },
     {
-      "name": "Cappuccino1",
+      "name": "Espresso",
       "id": "1f7b"
-    },
-    {
-      "name": "Cappuccino2",
-      "id": "6350"
-    },
-    {
-      "name": "Cappuccino3",
-      "id": "60fa"
-    },
-    {
-      "name": "Cappuccino4",
-      "id": "1f7b"
-    },
-    {
-      "name": "Cappuccino5",
-      "id": "6350"
-    }
-  ],
-  "raf": [
-    {
-      "name": "Raf1",
-      "id": "1f7b"
-    },
-    {
-      "name": "Raf2",
-      "id": "6350"
-    },
-    {
-      "name": "Raf3",
-      "id": "60fa"
-    },
-    {
-      "name": "Raf4",
-      "id": "1f7b"
-    },
-    {
-      "name": "Raf5",
-      "id": "6350"
-    }
-  ],
-  "latte": [
-    {
-      "name": "Latte1",
-      "id": "1f7b"
-    },
-    {
-      "name": "Latte2",
-      "id": "6350"
-    },
-    {
-      "name": "Latte3",
-      "id": "60fa"
-    },
-    {
-      "name": "Latte4",
-      "id": "1f7b"
-    },
-    {
-      "name": "Latte5",
-      "id": "6350"
-    }
-  ],
-  "raf": [
-    {
-      "name": "Raf1",
-      "id": "1f7b"
-    },
-    {
-      "name": "Raf2",
-      "id": "6350"
-    },
-    {
-      "name": "Raf3",
-      "id": "60fa"
-    },
-    {
-      "name": "Raf4",
-      "id": "1f7b"
-    },
-    {
-      "name": "Raf5",
-      "id": "6350"
     }
   ]
 }

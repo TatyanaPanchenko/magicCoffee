@@ -1,0 +1,44 @@
+.order-inner {
+  padding-top: 57px;
+  padding: 57px 26px 0;
+  width: 375px;
+  .order-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 19px;
+    .order-back {
+      background-image: url("./src/assets/back.png");
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+    }
+    .order-title {
+      font-style: 16px;
+      color: #001833;
+    }
+    .order-cart {
+      display: block;
+      width: 26px;
+      height: 26px;
+      background-image: url("../../assets/header/buy.svg");
+    }
+  }
+  .order-info {
+    font-family: "DM Sans", serif;
+    color: #001833;
+    .order-info-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 21px 0;
+      border-bottom: 1px solid #f4f5f7;
+    }
+  }
+  .order-price {
+    font-size: 16px;
+    color: #001833;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0 10px;
+  }
+}

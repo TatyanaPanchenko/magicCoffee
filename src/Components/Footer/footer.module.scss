@@ -1,0 +1,28 @@
+.footer {
+  background-color: #324a59;
+  padding: 16px 25px 22px;
+  position: fixed;
+  width: 375px;
+}
+.footer-inner {
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 21px 0;
+  .footer-icons {
+    display: flex;
+    justify-content: space-evenly;
+    .footer-icon {
+      width: 21px;
+      height: 21px;
+    }
+    .icon-home {
+      background-image: url("./src/assets/footer/home.png");
+    }
+    .icon-gift {
+      background-image: url("./src/assets/footer/gift.png");
+    }
+    .icon-about {
+      background-image: url("./src/assets/footer/about.png");
+    }
+  }
+}

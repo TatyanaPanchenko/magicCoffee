@@ -1,12 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import exp from "constants";
 
 const CoffeeSlice = createSlice({
   name: "coffee",
   initialState: [],
   reducers: {
     setCoffee(state, action) {
-      state.push(action.payload);
+      return [...action.payload];
     },
   },
 });
