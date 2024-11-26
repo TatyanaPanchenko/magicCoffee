@@ -1,11 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import OrderPage from "../../Pages/OrderPage/OrderPage";
+import { useDispatch } from "react-redux";
+import { setCurrentItem } from "../../store/slice/CurrentItemSlice";
 import style from "./coffeeCart.module.scss";
 
 export default function HomePage() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const getCoffeeStore = useSelector((state) => state.coffee);
   return (
     <>
@@ -15,12 +17,13 @@ export default function HomePage() {
             className={style["coffee-item"]}
             key={index}
             onClick={() => {
+              dispatch(setCurrentItem(item));
               navigate(`/order`);
             }}
           >
             <div className={style["coffee-img"]}>
               <img
-                src={`./src/assets/coffee/coffee${index}.png`}
+                src={`./src/assets/coffee/coffee_${item.name}.png`}
                 alt={item.name}
               />
             </div>

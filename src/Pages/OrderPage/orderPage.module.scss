@@ -24,6 +24,15 @@
       background-image: url("../../assets/header/buy.svg");
     }
   }
+  .order-img {
+    width: 325px;
+    height: 146px;
+    border-radius: 12px;
+    background-color: #f7f8fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .order-info {
     font-family: "DM Sans", serif;
     color: #001833;
@@ -32,6 +41,15 @@
       justify-content: space-between;
       padding: 21px 0;
       border-bottom: 1px solid #f4f5f7;
+      .order-count {
+        border: 1px solid rgba(216, 216, 216, 0.4);
+        border-radius: 50px;
+        span {
+          display: inline-block;
+          padding: 7px 15px;
+          cursor: pointer;
+        }
+      }
     }
   }
   .order-price {
@@ -40,5 +58,17 @@
     display: flex;
     justify-content: space-between;
     padding: 22px 0 10px;
+    margin-bottom: 10px;
+  }
+  .order-button {
+    background-color: #324a59;
+    color: #fff;
+    border-radius: 30px;
+    height: 46px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
 }

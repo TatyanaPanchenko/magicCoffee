@@ -3,11 +3,16 @@
     {
       "name": "Americano",
       "id": "1f7b",
-      "count": "1"
+      "count": 1,
+      "ristretto": null,
+      "where": "takeaway",
+
+      "volume": "250",
+      "price": 3
     },
     {
       "name": "Cappuccino",
-      "id": "1f7b"
+      "id": "60fa"
     },
     {
       "name": "Latte",
@@ -15,15 +20,15 @@
     },
     {
       "name": "Flat White",
-      "id": "1f7b"
+      "id": "b5eb"
     },
     {
       "name": "Raf",
-      "id": "60fa"
+      "id": "c964"
     },
     {
       "name": "Espresso",
-      "id": "1f7b"
+      "id": "7ea4"
     }
   ]
 }

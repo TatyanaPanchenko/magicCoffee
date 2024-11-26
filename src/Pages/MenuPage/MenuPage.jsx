@@ -18,6 +18,7 @@ export default function MenuPage() {
   }, []);
 
   const getCoffeeStore = useSelector((state) => state.coffee);
+
   return (
     <div className={style.container}>
       <Header />
