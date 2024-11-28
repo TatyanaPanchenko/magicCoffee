@@ -5,10 +5,19 @@ const CartSlice = createSlice({
   initialState: { cart: [] },
 
   reducers: {
-    addCart(state, action) {
-      state.cart = action.payload;
+    addItemCart(state, action) {
+      const cartEl = state.cart.find((el) => el.id === action.payload.id);
+      if (cartEl) {
+        cartEl.count++;
+      } else {
+        state.cart.push(action.payload);
+      }
+    },
+    deleteItemCart(state, action) {
+      const delEl = state.cart.filter((el) => el.id !== action.payload.id);
+      state.cart = delEl;
     },
   },
 });
-export const { addCart } = CartSlice.actions;
+export const { addItemCart, deleteItemCart } = CartSlice.actions;
 export default CartSlice.reducer;

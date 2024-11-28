@@ -1,5 +1,6 @@
+@import "../../style/vars.scss";
 .footer {
-  background-color: #324a59;
+  background-color: $accentColor;
   padding: 16px 25px 22px;
   position: fixed;
   width: 375px;

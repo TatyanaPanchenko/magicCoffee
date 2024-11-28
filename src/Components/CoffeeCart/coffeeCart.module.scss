@@ -1,6 +1,7 @@
+@import "../../style/vars.scss";
 .coffee-item {
   border-radius: 15px;
-  background-color: #f7f8fb;
+  background-color: $bgColor;
   width: 154px;
   height: 164px;
   display: flex;
@@ -14,7 +15,6 @@
     }
   }
   .coffee-name {
-    color: #001833;
     font-family: "DM Sans", sans-serif;
   }
 }

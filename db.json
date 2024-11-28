@@ -5,30 +5,54 @@
       "id": "1f7b",
       "count": 1,
       "ristretto": null,
-      "where": "takeaway",
-
+      "where": "Takeaway",
       "volume": "250",
       "price": 3
     },
     {
       "name": "Cappuccino",
-      "id": "60fa"
+      "id": "60fa",
+      "count": 1,
+      "ristretto": null,
+      "where": "Takeaway",
+      "volume": "250",
+      "price": 3
     },
     {
       "name": "Latte",
-      "id": "6350"
+      "id": "6350",
+      "count": 1,
+      "ristretto": null,
+      "where": "Takeaway",
+      "volume": "250",
+      "price": 3
     },
     {
       "name": "Flat White",
-      "id": "b5eb"
+      "id": "b5eb",
+      "count": 1,
+      "ristretto": null,
+      "where": "Takeaway",
+      "volume": "250",
+      "price": 3
     },
     {
       "name": "Raf",
-      "id": "c964"
+      "id": "c964",
+      "count": 1,
+      "ristretto": null,
+      "where": "Takeaway",
+      "volume": "250",
+      "price": 3
     },
     {
       "name": "Espresso",
-      "id": "7ea4"
+      "id": "7ea4",
+      "count": 1,
+      "ristretto": null,
+      "where": "Takeaway",
+      "volume": "250",
+      "price": 3
     }
   ]
 }

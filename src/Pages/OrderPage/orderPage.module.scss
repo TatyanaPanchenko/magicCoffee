@@ -1,12 +1,13 @@
+@import "../../style/vars.scss";
 .order-inner {
-  padding-top: 57px;
   padding: 57px 26px 0;
   width: 375px;
   .order-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 19px;
+    gap: 115px;
     .order-back {
       background-image: url("./src/assets/back.png");
       background-repeat: no-repeat;
@@ -14,21 +15,15 @@
       height: 24px;
     }
     .order-title {
-      font-style: 16px;
+      font-size: 16px;
       color: #001833;
-    }
-    .order-cart {
-      display: block;
-      width: 26px;
-      height: 26px;
-      background-image: url("../../assets/header/buy.svg");
     }
   }
   .order-img {
     width: 325px;
     height: 146px;
     border-radius: 12px;
-    background-color: #f7f8fb;
+    background-color: $bgColor;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,6 +45,14 @@
           cursor: pointer;
         }
       }
+      .order-choose {
+        display: flex;
+        gap: 10px;
+        span {
+          color: #d8d8d8;
+          cursor: pointer;
+        }
+      }
     }
   }
   .order-price {
@@ -61,7 +64,7 @@
     margin-bottom: 10px;
   }
   .order-button {
-    background-color: #324a59;
+    background-color: $accentColor;
     color: #fff;
     border-radius: 30px;
     height: 46px;

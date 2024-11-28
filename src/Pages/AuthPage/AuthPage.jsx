@@ -1,10 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, NavLink } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import style from "./authPage.module.scss";
 
 export default function AuthPage({ setAuth }) {
+  const [errAuth, setErrAuth] = useState(false);
   const {
     register,
     handleSubmit,
@@ -20,7 +22,7 @@ export default function AuthPage({ setAuth }) {
       })
       .catch((error) => {
         console.error(error.message);
-        setErrBase(true);
+        setErrAuth(true);
       });
   };
 
@@ -40,7 +42,7 @@ export default function AuthPage({ setAuth }) {
               required: "Must be filled in",
               pattern: {
                 value: /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/,
-                message: "Invalid characters",
+                message: "Incorrect characters",
               },
             })}
           />
@@ -57,7 +59,7 @@ export default function AuthPage({ setAuth }) {
               required: "Must be filled in",
               minLength: {
                 value: 6,
-                message: "The field must contain at least 6 characters",
+                message: "At least 6 characters",
               },
             })}
           />
@@ -65,6 +67,9 @@ export default function AuthPage({ setAuth }) {
             <p className={style.errorField}>{errors.password?.message}</p>
           )}
         </div>
+        {errAuth && (
+          <div className={style.errorField}>Incorrect password or login</div>
+        )}
         <input type="submit" value="" />
       </form>
       <div className={style["auth-link"]}>

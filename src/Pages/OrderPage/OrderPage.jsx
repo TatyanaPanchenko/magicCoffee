@@ -1,18 +1,25 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {
   incCurrentItem,
   decCurrentItem,
 } from "../../store/slice/CurrentItemSlice";
-import { addCart } from "../../store/slice/CartSlice";
+import { addItemCart } from "../../store/slice/CartSlice";
 import style from "./orderPage.module.scss";
 
 export default function OrderPage() {
+  const navigate = useNavigate();
   const getCurrentItem = useSelector((state) => state.currentItem.currentItem);
   const dispatch = useDispatch();
-  console.log(getCurrentItem);
+  const addActiveStyle = (e) => {
+    if (e.target.classList.contains("active") === true) {
+      e.target.classList.remove("active");
+    } else {
+      e.target.classList.add("active");
+    }
+  };
   return (
     <div className={style["order-inner"]}>
       <div className={style["order-top"]}>
@@ -20,7 +27,6 @@ export default function OrderPage() {
           <div className={style["order-back"]}></div>
         </NavLink>
         <div className={style["order-title"]}>Order</div>
-        <div className={style["order-cart"]}></div>
       </div>
       <div className={style["order-img"]}>
         <img
@@ -52,33 +58,80 @@ export default function OrderPage() {
         <div className={style["order-info-item"]}>
           <div className={style["order-ristertto"]}>Ristretto</div>
           <div className={style["order-choose"]}>
-            <span>One</span> <span>Two</span>
+            <span
+              onClick={(e) => {
+                addActiveStyle(e);
+              }}
+            >
+              One
+            </span>
+            <span
+              onClick={(e) => {
+                addActiveStyle(e);
+              }}
+            >
+              Two
+            </span>
           </div>
         </div>
         <div className={style["order-info-item"]}>
           <div className={style["order-where"]}>Onsite / Takeaway</div>
           <div className={style["order-choose"]}>
-            <span>{getCurrentItem.where}</span> <span></span>
+            <span
+              onClick={(e) => {
+                addActiveStyle(e);
+              }}
+            >
+              Onsite
+            </span>{" "}
+            <span
+              onClick={(e) => {
+                addActiveStyle(e);
+              }}
+            >
+              {getCurrentItem.where}
+            </span>
           </div>
         </div>
         <div className={style["order-info-item"]}>
           <div className={style["order-volume"]}>Volume, ml</div>
           <div className={style["order-choose"]}>
-            <span>{getCurrentItem.volume}</span> <span>350 </span>
-            <span>450</span>
+            <span
+              onClick={(e) => {
+                addActiveStyle(e);
+              }}
+            >
+              {getCurrentItem.volume}
+            </span>
+            <span
+              onClick={(e) => {
+                addActiveStyle(e);
+              }}
+            >
+              350
+            </span>
+            <span
+              onClick={(e) => {
+                addActiveStyle(e);
+              }}
+            >
+              450
+            </span>
           </div>
         </div>
       </div>
       <div className={style["order-price"]}>
-        <span>Total Amount</span> <span>BYN {getCurrentItem.price},00</span>
+        <span>Total Amount</span>{" "}
+        <span>BYN {getCurrentItem.price * getCurrentItem.count},00</span>
       </div>
       <div
         onClick={() => {
-          dispatch(addCart(getCurrentItem));
+          dispatch(addItemCart(getCurrentItem));
+          navigate("/cart");
         }}
         className={style["order-button"]}
       >
-        Next
+        Add to cart
       </div>
     </div>
   );

@@ -11,8 +11,9 @@ export default function Header() {
           <p className={style["header-name"]}>Alex</p>
         </div>
         <div className={style["header-icons"]}>
-          <div className={style["header-cart"]}></div>
-          <div className={style["header-users"]}></div>
+          <NavLink to="/cart">
+            <div className={style["header-cart"]}></div>
+          </NavLink>
         </div>
       </div>
     </header>

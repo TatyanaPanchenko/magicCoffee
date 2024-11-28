@@ -16,6 +16,9 @@ const CurrentItemSlice = createSlice({
         state.currentItem.count--;
       }
     },
+    getVolumeItem(state, action) {
+      state.currentItem.count++;
+    },
   },
 });
 

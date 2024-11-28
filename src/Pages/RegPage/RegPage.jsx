@@ -18,9 +18,6 @@ export default function RegPage({ setAuth }) {
       .then(() => {
         setAuth(true);
         reset();
-
-        // updateRegData(data);
-        // setRegdata({ data: data, status: true });
       })
       .catch((error) => {
         console.error(error);
@@ -47,7 +44,7 @@ export default function RegPage({ setAuth }) {
               maxLength: 30,
               pattern: {
                 value: /^[A-Za-z]+$/i,
-                message: "Invalid characters",
+                message: "Incorrect characters",
               },
             })}
           />
@@ -66,7 +63,7 @@ export default function RegPage({ setAuth }) {
               required: "Must be filled in",
               pattern: {
                 value: /^[0-9]+$/,
-                message: "Invalid characters",
+                message: "Incorrect characters",
               },
             })}
           />
@@ -85,7 +82,7 @@ export default function RegPage({ setAuth }) {
               required: "Must be filled in",
               pattern: {
                 value: /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/,
-                message: "Invalid characters",
+                message: "Incorrect characters",
               },
             })}
           />
@@ -104,7 +101,7 @@ export default function RegPage({ setAuth }) {
               required: "Must be filled in",
               minLength: {
                 value: 6,
-                message: "The field must contain at least 6 characters",
+                message: "At least 6 characters",
               },
             })}
           />

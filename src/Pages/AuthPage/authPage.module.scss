@@ -1,3 +1,4 @@
+@import "../../style/vars.scss";
 .auth-inner {
   padding-top: 57px;
   width: 100%;
@@ -18,7 +19,7 @@
   .auth-subtitle {
     font-weight: 400;
     margin-bottom: 46px;
-    color: #aaaaaa;
+    color: $shadowColor;
   }
   .auth-form {
     display: flex;
@@ -64,7 +65,7 @@
       width: 64px;
       height: 64px;
       border-radius: 50%;
-      background-color: #324a59;
+      background-color: $accentColor;
       cursor: pointer;
       margin-top: 179px;
       align-self: flex-end;
@@ -72,13 +73,17 @@
       border: none;
     }
   }
+  .errorField {
+    color: $accentColor;
+    font-size: 12px;
+  }
   .auth-link {
     padding-top: 129px;
-    color: #aaaaaa;
+    color: $shadowColor;
     font-weight: 400;
     a {
       text-decoration: none;
-      color: #324a59;
+      color: $accentColor;
       font-weight: 500;
     }
   }

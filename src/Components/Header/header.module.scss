@@ -8,11 +8,11 @@ header {
     text-decoration: none;
   }
   .header-container {
+    width: 375px;
     padding: 0 26px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 172px;
     margin-bottom: 7px;
     .header-greeting {
       color: #d8d8d8;
@@ -31,11 +31,6 @@ header {
         width: 26px;
         height: 26px;
         background-image: url("../../assets/header/buy.svg");
-      }
-      .header-users {
-        width: 26px;
-        height: 26px;
-        background-image: url("../../assets/header/profile.svg");
       }
     }
   }
