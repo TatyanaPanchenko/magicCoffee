@@ -18,6 +18,7 @@ export default function AuthPage({ setAuth }) {
     signInWithEmailAndPassword(auth, data.mail, data.password)
       .then(() => {
         setAuth(true);
+
         navigate("/menu");
       })
       .catch((error) => {

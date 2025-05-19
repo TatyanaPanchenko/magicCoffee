@@ -5,7 +5,7 @@
   align-self: start;
   width: 293px;
   .auth-back {
-    background-image: url("./src/assets/back.png");
+    background-image: url("./public/icons/back.png");
     background-repeat: no-repeat;
     width: 24px;
     height: 24px;
@@ -59,7 +59,7 @@
     }
 
     input[type="submit"] {
-      background-image: url("./src/assets/forward.png");
+      background-image: url("./public/icons/forward.png");
       background-repeat: no-repeat;
       background-position: center;
       width: 64px;

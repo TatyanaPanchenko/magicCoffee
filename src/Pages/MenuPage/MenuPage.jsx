@@ -1,19 +1,27 @@
 import React from "react";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import CoffeeCart from "../../Components/CoffeeCart/CoffeeCart";
-import style from "./menuPage.module.scss";
 import { setCoffee } from "../../store/slice/CoffeeSlice";
-import { getCoffee } from "../../services/dataBase.js";
+import { getData } from "../../services/fireBase.js";
+import style from "./menuPage.module.scss";
+
 export default function MenuPage() {
   const dispatch = useDispatch();
+
   useEffect(() => {
-    const getCoffeeBase = getCoffee();
-    getCoffeeBase.then((result) => {
-      dispatch(setCoffee(result));
+    const getCoffeeBase = getData("coffee");
+    const getUser = getData("user");
+    Promise.allSettled([getCoffeeBase, getUser]).then((results) => {
+      console.log(results);
+      if (results[0].status === "fulfilled") {
+        dispatch(setCoffee(results[0].value));
+      }
+      if (results[1].status === "fulfilled") {
+        dispatch(setCoffee(results[1].value));
+      }
     });
   }, []);
 
@@ -27,7 +35,9 @@ export default function MenuPage() {
           <div className={style["main-title"]}>Select your coffee</div>
           <div className={style["main-carts"]}>
             {getCoffeeStore.length === 0 ? (
-              <div>К сожалению, в данной категории ничего нет.</div>
+              <div className={style["main-error"]}>
+                К сожалению, в данной категории ничего нет.
+              </div>
             ) : (
               <CoffeeCart />
             )}

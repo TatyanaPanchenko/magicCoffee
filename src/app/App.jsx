@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import WelcomePage from "../Pages/WelcomePage/WelcomePage";
-import StartPage from "../Pages/StartPage/StartPage";
 import MenuPage from "../Pages/MenuPage/MenuPage";
 import AuthPage from "../Pages/AuthPage/AuthPage";
 import RegPage from "../Pages/RegPage/RegPage";
@@ -15,7 +14,6 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<WelcomePage auth={auth} />}></Route>
-      <Route path="/start" element={<StartPage />}></Route>
       <Route path="/menu" element={<MenuPage />}></Route>
       <Route path="/auth" element={<AuthPage setAuth={setAuth} />}></Route>
       <Route path="/reg" element={<RegPage setAuth={setAuth} />}></Route>

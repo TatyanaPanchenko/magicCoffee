@@ -9,14 +9,13 @@
     margin-bottom: 19px;
     gap: 115px;
     .order-back {
-      background-image: url("./src/assets/back.png");
+      background-image: url("./public/icons/back.png");
       background-repeat: no-repeat;
       width: 24px;
       height: 24px;
     }
     .order-title {
       font-size: 16px;
-      color: #001833;
     }
   }
   .order-img {
@@ -30,7 +29,7 @@
   }
   .order-info {
     font-family: "DM Sans", serif;
-    color: #001833;
+
     .order-info-item {
       display: flex;
       justify-content: space-between;
@@ -47,10 +46,37 @@
       }
       .order-choose {
         display: flex;
-        gap: 10px;
+        color: #d8d8d8;
+        cursor: pointer;
+      }
+      .choose-ristretto {
+        gap: 8px;
         span {
-          color: #d8d8d8;
-          cursor: pointer;
+          border: 1px solid #d8d8d8;
+          border-radius: 50px;
+          padding: 5px 20px;
+        }
+      }
+      .choose-where {
+        gap: 30px;
+        svg {
+          fill: #d8d8d8;
+        }
+      }
+      .choose-volume {
+        gap: 28px;
+        align-items: flex-end;
+        svg {
+          fill: #d8d8d8;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          align-items: center;
+          span {
+            font-weight: 500;
+          }
         }
       }
     }

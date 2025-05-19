@@ -2,6 +2,7 @@ import React from "react";
 import { useForm, Controller } from "react-hook-form";
 import { useNavigate, NavLink } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { setUser } from "../../services/fireBase";
 import style from "./regPage.module.scss";
 
 export default function RegPage({ setAuth }) {
@@ -17,6 +18,7 @@ export default function RegPage({ setAuth }) {
     createUserWithEmailAndPassword(auth, data.mail, data.password)
       .then(() => {
         setAuth(true);
+        setUser(data);
         reset();
       })
       .catch((error) => {

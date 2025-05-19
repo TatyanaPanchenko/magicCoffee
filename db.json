@@ -4,54 +4,54 @@
       "name": "Americano",
       "id": "1f7b",
       "count": 1,
-      "ristretto": null,
-      "where": "Takeaway",
-      "volume": "250",
+      "ristretto": ["One", "Two"],
+      "where": ["Onsite", "Takeaway"],
+      "volume": [250, 350, 450],
       "price": 3
     },
     {
       "name": "Cappuccino",
       "id": "60fa",
       "count": 1,
-      "ristretto": null,
-      "where": "Takeaway",
-      "volume": "250",
-      "price": 3
+      "ristretto": ["One", "Two"],
+      "where": ["Onsite", "Takeaway"],
+      "volume": [250, 350, 450],
+      "price": 4
     },
     {
       "name": "Latte",
       "id": "6350",
       "count": 1,
-      "ristretto": null,
-      "where": "Takeaway",
-      "volume": "250",
-      "price": 3
+      "ristretto": ["One", "Two"],
+      "where": ["Onsite", "Takeaway"],
+      "volume": [250, 350, 450],
+      "price": 4
     },
     {
       "name": "Flat White",
       "id": "b5eb",
       "count": 1,
-      "ristretto": null,
-      "where": "Takeaway",
-      "volume": "250",
-      "price": 3
+      "ristretto": ["One", "Two"],
+      "where": ["Onsite", "Takeaway"],
+      "volume": [250, 350, 450],
+      "price": 4
     },
     {
       "name": "Raf",
       "id": "c964",
       "count": 1,
-      "ristretto": null,
-      "where": "Takeaway",
-      "volume": "250",
-      "price": 3
+      "ristretto": ["One", "Two"],
+      "where": ["Onsite", "Takeaway"],
+      "volume": [250, 350, 450],
+      "price": 5
     },
     {
       "name": "Espresso",
       "id": "7ea4",
       "count": 1,
-      "ristretto": null,
-      "where": "Takeaway",
-      "volume": "250",
+      "ristretto": ["One", "Two"],
+      "where": ["Onsite", "Takeaway"],
+      "volume": [250, 350, 450],
       "price": 3
     }
   ]

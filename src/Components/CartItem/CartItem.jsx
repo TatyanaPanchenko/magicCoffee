@@ -19,7 +19,7 @@ export default function CartItem({ item }) {
       <div className={style["cart-wrapper"]}>
         <div className={style["cart-img"]}>
           <img
-            src={`./src/assets/coffee/coffee_${item.name}.png`}
+            src={`./public/coffee/coffee_${item.name}.png`}
             alt={item.name}
           />
         </div>

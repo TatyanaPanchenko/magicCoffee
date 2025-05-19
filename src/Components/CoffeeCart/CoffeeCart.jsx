@@ -23,7 +23,7 @@ export default function HomePage() {
           >
             <div className={style["coffee-img"]}>
               <img
-                src={`./src/assets/coffee/coffee_${item.name}.png`}
+                src={`./public/coffee/coffee_${item.name}.png`}
                 alt={item.name}
               />
             </div>

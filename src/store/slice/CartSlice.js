@@ -18,6 +18,7 @@ const CartSlice = createSlice({
       state.cart = delEl;
     },
   },
+  // extraReducers
 });
 export const { addItemCart, deleteItemCart } = CartSlice.actions;
 export default CartSlice.reducer;

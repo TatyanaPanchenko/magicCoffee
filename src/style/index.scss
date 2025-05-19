@@ -13,18 +13,14 @@ body {
   font-weight: 500;
   font-size: 14px;
   color: $mainTextColor;
-  .phone-top {
-    position: absolute;
-    top: 13px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-image: url("./src/assets/phone-top-dark.png");
-    background-repeat: no-repeat;
-    width: 350px;
-    height: 23px;
-    z-index: 10;
-  }
+
   .active {
     color: #000000 !important;
+  }
+  .active svg {
+    fill: #000000 !important;
+  }
+  svg.active {
+    fill: #000000 !important;
   }
 }
