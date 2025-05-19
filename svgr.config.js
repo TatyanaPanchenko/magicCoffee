@@ -1,5 +1,5 @@
 const path = require("path");
-const outDir = "./public/icons";
+const outDir = "./img/icons";
 
 const iconTemplate = (variables, { tpl }) => tpl`
 ${variables.imports};
