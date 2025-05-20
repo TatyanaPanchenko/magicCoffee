@@ -9,9 +9,7 @@ export default function WelcomePage({ auth }) {
       <div className={style["welcomepage-title"]}>
         Feel yourself like a barista!
       </div>
-      <div className={style["welcomepage-subtitle"]}>
-        Magic coffee on order.
-      </div>
+      <div className={style["welcomepage-subtitle"]}>Magic coffee on order</div>
       <div className={style["welcomepage-button"]}>
         {auth ? (
           <NavLink to="/menu">
